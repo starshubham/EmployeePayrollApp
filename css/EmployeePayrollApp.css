@@ -105,3 +105,22 @@ label
     border-radius: 4px; 
     resize: vertical; 
 }
+
+/* UC3:- Ability to specify the Profile Pic in the Form */
+.profile-radio-content 
+{
+    display: flex; 
+    flex-direction: row; 
+} 
+.profile-radio-content > label 
+{
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+} 
+.profile 
+{
+    width: 40px; 
+    border-radius: 50%; 
+    margin-left: 12px;
+}
