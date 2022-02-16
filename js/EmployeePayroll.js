@@ -10,7 +10,14 @@ class EmployeePayroll {
     set id(id) { this._id = id; }
 
     get name() { return this._name; }
-    set name(name) { this._name = name; }
+    set name(name) { 
+        let namePattern = new RegExp('^[A-Z]{1}[a-z]{2,}$');
+
+            if(!namePattern.test(name))
+                throw `Name is in Incorrect Format`;
+            else
+                this._name=name;
+    }
 
     get profilePic() { return this._profilePic; }
     set profilePic(profilePic) { this._profilePic = profilePic; }
@@ -28,7 +35,21 @@ class EmployeePayroll {
     set note(note) { this._note = note; }
 
     get startDate() { return this._startDate; }
-    set startDate(startDate) { this._startDate = startDate; }
+    set startDate(startDate) { 
+        let now = new Date();
+        
+        if(date!=null)
+        {
+            if(startDate>now) 
+                throw "Start date is a future date";
+            var diff=Math.abs( now.getTime() - date.getTime());
+            if(diff/(1000*60*60*24)>30) 
+                throw "Start date is beyond 30 days";
+                this._startDate = date;
+        }
+        else
+            throw `date Value is null`;
+    }
 
     // toString() method
     toString() {
