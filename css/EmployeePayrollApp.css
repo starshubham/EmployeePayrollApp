@@ -30,7 +30,7 @@ img
 }
 .emp-text
 {
-    font:normal normal bold 20px/25px Montserrat;
+    font: normal normal bold 20px/25px Montserrat;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0px;
     color: #82a70c;
@@ -39,4 +39,7 @@ img
 .emp-payroll
 {
     color: #42515f;
+}
+*{
+    box-sizing: border-box;
 }
